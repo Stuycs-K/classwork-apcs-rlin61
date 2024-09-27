@@ -1,9 +1,10 @@
-public class MyArray{
-  public static void main(Strings[] args){
+public class MyArrays{
+  public static void main(String[] args){
   // test for aryToString
-  int[] nums = {4, 5, 6};
+  int[] nums = new int[] {4, 5, 6};
   System.out.println(aryToString(nums));
   //test for returnCopy
+  
   System.out.println(aryToString(returnCopy(ary)).equals(ary));
   System.out.println(aryToString(returnCopy(ary)) == ary);
   }
@@ -18,6 +19,6 @@ public class MyArray{
     }
     return s;
   }
-  public static int[] returnCopy(int[]ary)
+  public static int[] returnCopy(int[]ary){}
 
 }
