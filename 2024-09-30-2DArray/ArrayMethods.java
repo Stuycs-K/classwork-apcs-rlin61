@@ -15,7 +15,7 @@ public class ArrayMethods{
     System.out.println(arrToString(test1).equals("[2, 3, 4, 9]"));
 
     System.out.println(arrToString(test2).equals("[[2, 3, 4], [5, 6, 7], [8, 9, 10]]"));
-    System.out.println(arrToString(test5).equals("[[], {1, 5]]"));
+    System.out.println(arrToString(test5).equals("[[], [1, 5]]"));
     System.out.println(arrToString(test21).equals("[[4], [1, 2, 4]]"));
     System.out.println(arr2DSum(test3) == 46);
     System.out.println(arr2DSum(test21) == 11);
