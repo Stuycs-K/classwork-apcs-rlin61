@@ -4,16 +4,24 @@
 public class ArrayMethods{
 
   public static void main(String[] args){
-    int[] test1 = new int[] {1, 2, 3, 4, 5, 6};
+    int[] test1 = new int[] {2, 3, 4, 9};
     int[][] test2 = new int[][] {{2, 3, 4}, {5, 6, 7}, {8, 9, 10}};
+    int[][] test21 = new int[][] {{4}, {1, 2, 4}};
     int[][] test3 = new int[][] {{4, 5, 1}, {10, 10, 10}, {1, 2, 3}};
     int[][] test4 = new int[][] {{1,2,3},{4,5,6}};
+    int[][] test5 = new int[][] {{}, {1, 5}};
+    int[][] test6 = new int[][] {{3, 3, 3}, {4, 5, 1}, {41, 414, 1}, {414, 4141, 41}};
 
-    System.out.println(arrToString(test1).equals("[1, 2, 3, 4, 5, 6]"));
+    System.out.println(arrToString(test1).equals("[2, 3, 4, 9]"));
 
     System.out.println(arrToString(test2).equals("[[2, 3, 4], [5, 6, 7], [8, 9, 10]]"));
+    System.out.println(arrToString(test5).equals("[[], {1, 5]]"));
+    System.out.println(arrToString(test21).equals("[[4], [1, 2, 4]]"));
     System.out.println(arr2DSum(test3) == 46);
+    System.out.println(arr2DSum(test21) == 11);
+    System.out.println(arr2DSum(test5) == 6);
     System.out.println(arrToString(swapRC(test4)));
+    System.out.println(arrToString(swapRC(test6)));
 
   }
   //2. Copy your arrToString method from before.
@@ -42,7 +50,8 @@ public class ArrayMethods{
     * You are encouraged to notice that you may want to re-use
     * previous code, but you should NOT duplicate that code. (Don't copy/paste or retype it)
     */
-  public static String arrToString(int[][]ary){
+  public static String arrToString(int[][] ary){
+     //this should use arrToString(int[])
     String empty = "[";
     for(int i = 0; i < ary.length; i++){
       empty += arrToString(ary[i]);
