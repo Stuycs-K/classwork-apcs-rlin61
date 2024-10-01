@@ -7,11 +7,13 @@ public class ArrayMethods{
     int[] test1 = new int[] {1, 2, 3, 4, 5, 6};
     int[][] test2 = new int[][] {{2, 3, 4}, {5, 6, 7}, {8, 9, 10}};
     int[][] test3 = new int[][] {{4, 5, 1}, {10, 10, 10}, {1, 2, 3}};
+    int[][] test4 = new int[][] {{1,2,3},{4,5,6}};
 
     System.out.println(arrToString(test1).equals("[1, 2, 3, 4, 5, 6]"));
 
     System.out.println(arrToString(test2).equals("[[2, 3, 4], [5, 6, 7], [8, 9, 10]]"));
     System.out.println(arr2DSum(test3) == 46);
+    System.out.println(arrToString(swapRC(test4)));
 
   }
   //2. Copy your arrToString method from before.
@@ -60,7 +62,7 @@ public class ArrayMethods{
     //use a nested loop to solve this
     int sum = 0;
     for(int i = 0; i < nums.length; i++){
-      for(int x = 0; x < nums[i].length; i++){
+      for(int x = 0; x < nums[i].length; x++){
         sum += nums[i][x];
       }
     }
@@ -72,7 +74,13 @@ public class ArrayMethods{
     * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
 */
   public static int[][] swapRC(int[][]nums){
-    return new int[1][1];
+    int[][] arr1 = new int[nums[0].length][nums.length];
+    for(int i = 0; i < nums.length; i++){
+      for(int x = 0; x < nums[i].length; x++){
+        arr1[x][i] = nums[i][x];
+      }
+    }
+    return arr1;
   }
 
 }
