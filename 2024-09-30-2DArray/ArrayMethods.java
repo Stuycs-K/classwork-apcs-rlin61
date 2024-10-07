@@ -13,6 +13,8 @@ public class ArrayMethods{
     int[][] test6 = new int[][] {{3, 3, 3}, {4, 5, 1}, {41, 414, 1}, {414, 4141, 41}};
     int[][] test7 = new int[][] {{-1,-1,-3}, {-5, -5, -1}};
     int[][] test8 = new int[][] {{-1,-1,-3}, {-5, -5, -1}, {-1, -1, -1}, {-1, -1, -1}};
+    int[][] test9 = new int[][] {{4, 5}, {3, 2}};
+    int[][] test10 = new int[][] {{}, {10, 40, 1}, {19, 1}};
 
     System.out.println(arrToString(test1).equals("[2, 3, 4, 9]"));
 
@@ -26,6 +28,17 @@ public class ArrayMethods{
     System.out.println(arrToString(swapRC(test6)));
     System.out.println(arrToString(replaceNegative(test7)));
     System.out.println(arrToString(replaceNegative(test8)));
+    System.out.println(copy(test9) != test9);
+    System.out.println(arrToString(copy(test9)).equals(arrToString(test9)));
+    int[][] copy9 = copy(test9);
+    test9[0] = new int[] {1, 2};
+    System.out.println(!arrToString(copy9).equals(arrToString(test9)));
+    System.out.println(copy(test10) != test10);
+    System.out.println(arrToString(copy(test10)).equals(arrToString(test10)));
+    int[][] copy10 = copy(test10);
+    test10[2] = new int[] {0, 0};
+    System.out.println(!arrToString(copy10).equals(arrToString(test10)));
+
   }
   //2. Copy your arrToString method from before.
   /**Return a String that represets the array in the format:
