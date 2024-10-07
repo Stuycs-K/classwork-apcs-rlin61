@@ -128,13 +128,19 @@ public class ArrayMethods{
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
   public static int[][] copy(int[][] nums){
-
-
-    return null;//placeholder so it compiles
+    int[][] dupe = new int[nums.length][];
+    for (int i = 0; i < nums.length; i++){
+      dupe[i] = copyHelper(nums[i]);
+    }
+    return dupe;
   }
 
   public static int[] copyHelper(int[] arry){
-
+    int[] copyarry = new int[arry.length];
+    for(int x = 0; x < arry.length; x++){
+       copyarry[x] = arry[x];
+    }
+    return copyarry;
   }
 
 }
