@@ -2,54 +2,21 @@ import java.util.Arrays;
 public class ArrayDemo{
   public static void main(String[]args){
     //write your tests here!
-    int[] test1 = new int[] {2, 3, 4, 9};
-    int[][] test2 = new int[][] {{2, 3, 4}, {5, 6, 7}, {8, 9, 10}};
-    int[][] test21 = new int[][] {{4}, {1, 2, 4}};
-    int[][] test3 = new int[][] {{4, 5, 1}, {10, 10, 10}, {1, 2, 3}};
-    int[][] test4 = new int[][] {{1,2,3},{4,5,6}};
-    int[][] test5 = new int[][] {{}, {1, 5}};
-    int[][] test6 = new int[][] {{3, 3, 3}, {4, 5, 1}, {41, 414, 1}, {414, 4141, 41}};
-    int[][] test7 = new int[][] {{-1,-1,-3}, {-5, -5, -1}};
-    int[][] test8 = new int[][] {{-1,-1,-3}, {-5, -5, -1}, {-1, -1, -1}, {-1, -1, -1}};
-    int[][] test9 = new int[][] {{4, 5}, {3, 2}};
-    int[][] test10 = new int[][] {{}, {10, 40, 1}, {19, 1}};
-
-    System.out.println(arrToString(test1).equals("[2, 3, 4, 9]"));
-
-    System.out.println(arrToString(test2).equals("[[2, 3, 4], [5, 6, 7], [8, 9, 10]]"));
-    System.out.println(arrToString(test5).equals("[[], [1, 5]]"));
-    System.out.println(arrToString(test21).equals("[[4], [1, 2, 4]]"));
-    System.out.println(arr2DSum(test3) == 46);
-    System.out.println(arr2DSum(test21) == 11);
-    System.out.println(arr2DSum(test5) == 6);
-    System.out.println(arrToString(swapRC(test4)));
-    System.out.println(arrToString(swapRC(test6)));
-    System.out.println(arrToString(replaceNegative(test7)));
-    System.out.println(arrToString(replaceNegative(test8)));
-    System.out.println(copy(test9) != test9);
-    System.out.println(arrToString(copy(test9)).equals(arrToString(test9)));
-    int[][] copy9 = copy(test9);
-    test9[0] = new int[] {1, 2};
-    System.out.println(!arrToString(copy9).equals(arrToString(test9)));
-    System.out.println(copy(test10) != test10);
-    System.out.println(arrToString(copy(test10)).equals(arrToString(test10)));
-    int[][] copy10 = copy(test10);
-    test10[2] = new int[] {0, 0};
-    System.out.println(!arrToString(copy10).equals(arrToString(test10)));
-//do countZeros2D and the method array tests
-  }
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-
+//do countZeros2D and the method array tests
   }
+
+
+
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
   public static String arrToString(int[]ary){
     String s = "[";
-    for (int i = 0; i < nums.length; i++){
-      s += nums[i];
-      if (i < nums.length -1){
+    for (int i = 0; i < ary.length; i++){
+      s += ary[i];
+      if (i < ary.length -1){
         s += ", ";
       }
 
@@ -78,7 +45,15 @@ public class ArrayDemo{
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
-    return 0;
+    int count = 0;
+    for (int i = 0; i < nums.length; i++){
+        for(int x = 0; x < nums[i].length; x++){
+          if(nums[i][x] == 0){
+            count +=1;
+          }
+        }
+    }
+    return count;
   }
 
   //2. Calculate the sum of a 2d array
@@ -118,7 +93,7 @@ public class ArrayDemo{
         }
       }
     }
-    return vals;
+
     }
 
   //4. Make a copy of the given 2d array.
