@@ -7,11 +7,16 @@ public class ArrayDemo{
     int[] test3 = new int[] {4, 5, 6};
     System.out.println(countZeros2D(test1) == 4);
     System.out.println(countZeros2D(test2) == 2);
+
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
     System.out.println(Arrays.toString(test3).equals(arrToString(test3)));
     System.out.println(Arrays.deepToString(test2).equals(arrToString(test2)));
+    System.out.println(htmlTable(new int[][]{{1,2},{3}}).equals("<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"));
+
+
+
   }
 
 
@@ -147,7 +152,7 @@ public class ArrayDemo{
     for (int i = 0; i < nums.length; i++){
       table += "<tr>";
       for (int x = 0; x < nums[i].length; x++){
-        table = table + "<td>" + nums[i][x] + "/td";
+        table = table + "<td>" + nums[i][x] + "</td>";
 
       }
       table += "</tr>";
