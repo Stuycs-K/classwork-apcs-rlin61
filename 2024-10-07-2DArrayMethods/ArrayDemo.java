@@ -4,12 +4,14 @@ public class ArrayDemo{
     //write your tests here!
     int[][] test1 = new int[2][2];
     int[][] test2 = new int[][] {{4, 5}, {}, {0, 0, 1}};
+    int[] test3 = new int[] {4, 5, 6};
     System.out.println(countZeros2D(test1) == 4);
     System.out.println(countZeros2D(test2) == 2);
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
-//do countZeros2D and the method array tests
+    System.out.println(Arrays.toString(test3).equals(arrToString(test3)));
+    System.out.println(Arrays.deepToString(test2).equals(arrToString(test2)));
   }
 
 
