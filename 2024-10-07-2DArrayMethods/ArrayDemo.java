@@ -2,6 +2,10 @@ import java.util.Arrays;
 public class ArrayDemo{
   public static void main(String[]args){
     //write your tests here!
+    int[][] test1 = new int[2][2];
+    int[][] test2 = new int[][] {{4, 5}, {}, {0, 0, 1}};
+    System.out.println(countZeros2D(test1) == 4);
+    System.out.println(countZeros2D(test2) == 2);
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
