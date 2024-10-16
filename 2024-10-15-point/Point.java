@@ -2,7 +2,7 @@ public class Point{
   private double x,y;
 
   public String toString(){
-    return "" + x + ", " + y;
+    return "(" + x + ", " + y + ")";
   }
 
   //Initialize this Point to have the same values as the other Point.
@@ -31,7 +31,7 @@ public class Point{
   Write this method FOURTH, go to the main and do that one first.
   */
   public double distanceTo(Point other){
-    return 0.0;
+    return Math.sqrt((Math.pow(this.x - other.x, 2)) + (Math.pow(this.y - other.y, 2)));
   }
 
   /*
@@ -39,7 +39,7 @@ public class Point{
   do not write redundant code.
   */
   public static double distance(Point a, Point b){
-    return 0.0;
+    return Demo.distance(a, b); 
   }
 
 
