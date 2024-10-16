@@ -22,5 +22,12 @@ public class Demo{
     System.out.println( Point.distance(p2,p3));
     System.out.println( p1.distanceTo(p2));
     System.out.println( p2.distanceTo(p3));
+    // Triangle: (0,0) (1,0) (0.5, Math.sqrt(3) / 2)
+    Point c1 = new Point(0, 0);
+    Point c2 = new Point(1, 0);
+    Point c3 = new Point(0.5, Math.sqrt(3)/2);
+    System.out.println(c1.distanceTo(c2));
+    System.out.println(c1.distanceTo(c3));
+    System.out.println(c2.distanceTo(c3));
   }
 }
