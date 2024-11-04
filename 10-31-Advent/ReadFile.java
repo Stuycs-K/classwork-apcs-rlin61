@@ -10,12 +10,31 @@ public class ReadFile {
     try {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
+      while(input.hasNextLine()){
+        String line = input.nextLine();
+        while(input.hasNext()){
+          if (input.next().equals("{")){
+            System.out.println(line);
+          }
+        }
+      }
+      /*
       while (input.hasNextLine()){
         input.nextLine();
         if(input.hasNextLine()){
         System.out.println(input.nextLine());
       }
       }
+      */
+      /*
+
+      File file = new File("ReadFile.java");//1
+      Scanner input = new Scanner(file);
+      while (input.hasNext()){
+        System.out.println(input.next());
+      }
+*/
+
       //CODE THAT SCANS THE FILE.
       input.close();//releases the file from your program
 
