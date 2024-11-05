@@ -11,11 +11,9 @@ public class ReadFile {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
       while(input.hasNextLine()){
-        String line = input.nextLine();
-        while(input.hasNext()){
-          if (input.next().equals("{")){
-            System.out.println(line);
-          }
+         String line = input.nextLine();
+        if (line.indexOf("{") > -1){
+          System.out.println(line);
         }
       }
       /*
