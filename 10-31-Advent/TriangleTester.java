@@ -8,7 +8,7 @@ public class TriangleTester{
      try {
        File file = new File(filename);
        Scanner input = new Scanner(file);
-       while (input.hasNextLine()){
+       while (input.hasNextInt()){
          if (testTriangle(input.nextInt(), input.nextInt(), input.nextInt())){
            count += 1;
          }
@@ -26,7 +26,7 @@ public class TriangleTester{
      try {
        File file = new File(filename);
        Scanner input = new Scanner(file);
-       while(input.hasNextLine()){
+       while(input.hasNextInt()){
          int[] row = new int[3];
          for (int i = 0; i < 3; i++){
              row[i] = input.nextInt();
