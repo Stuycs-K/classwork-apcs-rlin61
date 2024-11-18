@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.lang.Math;
+import java.util.Arrays;
 public class ArrayListPractice{
 
 
