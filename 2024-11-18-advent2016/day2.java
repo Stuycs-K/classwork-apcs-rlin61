@@ -7,10 +7,43 @@ public class day2{
     File file = new File("day2Input.txt");
     Scanner input = new Scanner(file);
     String passcode = "";
+    int x = 0;
+    int y = 2;
+    String[][] padlock = new String[][] {
+      {null, null, "1", null, null},
+       {null, "2", "3", "4", null},
+        {"5", "6", "7", "8", "9"},
+        {null, "A", "B", "C", null},
+        {null, null, "D", null, null}
+    };
     while(input.hasNextLine()){
-      passcode += code(input.nextLine());
+      String line = input.nextLine();
+      for (int i = 0; i < line.length(); i++){
+        if (line.substring(i, i +1).equals("U")){
+          if (y > 0 && padlock[y - 1][x] != null){
+            y -= 1;
+        }
+          }
+          else if (line.substring(i, i +1).equals("D")){
+            if (y < 4 && padlock[y + 1][x] != null){
+              y += 1;
+            }
+          }
+          else if (line.substring(i, i +1).equals("L")){
+            if (x > 0 && padlock[y][x - 1] != null){
+              x -= 1;
+            }
+      }
+      else if (line.substring(i, i +1).equals("R")){
+        if(x < 4 && padlock[y][x + 1] != null){
+          x += 1;
+        }
     }
-    System.out.println(passcode);
+    }
+
+    passcode += padlock[y][x];
+  }
+   System.out.println(passcode);
     input.close();
   }
   catch (FileNotFoundException ex) {
@@ -18,8 +51,5 @@ public class day2{
        System.exit(1);
      }
   }
-  public static String code(String input){
-    String[][] padlock = new String[][] {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"}};
 
-  }
 }
