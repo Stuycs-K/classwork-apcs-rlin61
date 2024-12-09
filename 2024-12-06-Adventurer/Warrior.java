@@ -21,15 +21,22 @@ public class Warrior extends Adventurer{
   }
   public String attack(Adventurer other){
     other.applyDamage(10);
-    System.out.println(this.getName() + " attacked " + other.getName());
+    return this.getName() + " attacked " + other.getName();
   }
   public String support(Adventurer other){
     other.setHP(other.getHP() + 10);
-    System.out.println(this.getName() + " healed " + other.getName());
+    return this.getName() + " healed " + other.getName();
 
   }
-  public String support();
-  public String specialAttack(Adventurer other);
+  public String support(){
+    this.setHP(this.getHP() + 10);
+    return this.getName() + " healed " + this.getName();
+  }
+  public String specialAttack(Adventurer other){
+    this.setSpecial(this.getSpecial() - 10);
+    other.applyDamage(20);
+    return this.getName() + " used special attack against " + other.getName();
+  }
 
 
 
