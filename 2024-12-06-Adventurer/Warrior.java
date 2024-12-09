@@ -1,6 +1,7 @@
 public class Warrior extends Adventurer{
   private String specialName = "Rage";
-  private int special, specialMax;
+  private int special;
+  private int specialMax = 100;
   public Warrior(String name){
     super(name);
   }
@@ -37,7 +38,4 @@ public class Warrior extends Adventurer{
     other.applyDamage(20);
     return this.getName() + " used special attack against " + other.getName();
   }
-
-
-
 }
