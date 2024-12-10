@@ -1,6 +1,6 @@
 public class Warrior extends Adventurer{
   private String specialName = "Rage";
-  private int special;
+  private int special = 100;
   private int specialMax = 100;
   public Warrior(String name){
     super(name);
